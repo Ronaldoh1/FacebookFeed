@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		FB7F76EA1DF4830A004575C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7F76E91DF4830A004575C6 /* AppDelegate.swift */; };
-		FB7F76EC1DF4830A004575C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7F76EB1DF4830A004575C6 /* ViewController.swift */; };
 		FB7F76F21DF4830A004575C6 /* FacebookFeed.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB7F76F01DF4830A004575C6 /* FacebookFeed.xcdatamodeld */; };
 		FB7F76F41DF4830A004575C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7F76F31DF4830A004575C6 /* Assets.xcassets */; };
 		FB7F76F71DF4830A004575C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7F76F51DF4830A004575C6 /* LaunchScreen.storyboard */; };
+		FBB8BE0E1DF49CA8001C528C /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8BE0D1DF49CA8001C528C /* FeedCell.swift */; };
+		FBF671F01DF48B9A009E36C0 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF671EF1DF48B9A009E36C0 /* FeedController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FB7F76E61DF4830A004575C6 /* FacebookFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FacebookFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB7F76E91DF4830A004575C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FB7F76EB1DF4830A004575C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FB7F76F11DF4830A004575C6 /* FacebookFeed.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FacebookFeed.xcdatamodel; sourceTree = "<group>"; };
 		FB7F76F31DF4830A004575C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB7F76F61DF4830A004575C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB7F76F81DF4830A004575C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBB8BE0D1DF49CA8001C528C /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		FBF671EF1DF48B9A009E36C0 /* FeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +57,8 @@
 			isa = PBXGroup;
 			children = (
 				FB7F76E91DF4830A004575C6 /* AppDelegate.swift */,
-				FB7F76EB1DF4830A004575C6 /* ViewController.swift */,
+				FBF671EF1DF48B9A009E36C0 /* FeedController.swift */,
+				FBB8BE0D1DF49CA8001C528C /* FeedCell.swift */,
 				FB7F76F31DF4830A004575C6 /* Assets.xcassets */,
 				FB7F76F51DF4830A004575C6 /* LaunchScreen.storyboard */,
 				FB7F76F81DF4830A004575C6 /* Info.plist */,
@@ -96,6 +99,7 @@
 				TargetAttributes = {
 					FB7F76E51DF4830A004575C6 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
 					};
 				};
 			};
@@ -135,7 +139,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB7F76F21DF4830A004575C6 /* FacebookFeed.xcdatamodeld in Sources */,
-				FB7F76EC1DF4830A004575C6 /* ViewController.swift in Sources */,
+				FBB8BE0E1DF49CA8001C528C /* FeedCell.swift in Sources */,
+				FBF671F01DF48B9A009E36C0 /* FeedController.swift in Sources */,
 				FB7F76EA1DF4830A004575C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +252,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ronaldoh1.FacebookFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Debug;
 		};
@@ -258,6 +264,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Ronaldoh1.FacebookFeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0.1;
 			};
 			name = Release;
 		};
