@@ -23,22 +23,7 @@ class FeedCell: UICollectionViewCell {
     let nameLabel: UILabel = {
         let label = UILabel()
         label.numberOfLines = 2
-        let attributedText = NSMutableAttributedString(string: "Mark Zuckerberg", attributes: [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 14)])
-        label.attributedText = attributedText
-        
-        attributedText.append(NSAttributedString(string: "\nDecember 18  •  San Francisco  •  ", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 12), NSForegroundColorAttributeName:
-            UIColor(red:155/255, green: 161/255, blue: 161/255, alpha: 1)]))
-        
-        let paragraphStyle = NSMutableParagraphStyle()
-        paragraphStyle.lineSpacing = 4
-        attributedText.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.characters.count))
-        
-        let attachment = NSTextAttachment()
-        attachment.image = UIImage(named: "globe_small")
-        attachment.bounds = CGRect(x: 0, y: -2, width: 12, height: 12)
-        attributedText.append(NSAttributedString(attachment: attachment))
-        
-        label.attributedText = attributedText
+
         
         return label
     }()
@@ -56,6 +41,7 @@ class FeedCell: UICollectionViewCell {
         let textView = UITextView()
         textView.text = "Meanwhile, beast turned to the dark side"
         textView.font = UIFont.systemFont(ofSize: 14)
+        textView.isScrollEnabled = false 
         
         return textView
     }()
@@ -87,6 +73,34 @@ class FeedCell: UICollectionViewCell {
     let commentButton = FeedCell.buttonForTitle(title: "Comment", imageName: "Comment")
     let shareButton = FeedCell.buttonForTitle(title: "Share", imageName: "Share")
     
+    var post: Post? {
+        didSet{
+            if let name = post?.name {
+           
+            let attributedText = NSMutableAttributedString(string: name, attributes: [NSFontAttributeName : UIFont.boldSystemFont(ofSize: 14)])
+            nameLabel.attributedText = attributedText
+            
+            attributedText.append(NSAttributedString(string: "\nDecember 18  •  San Francisco  •  ", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 12), NSForegroundColorAttributeName:
+                UIColor(red:155/255, green: 161/255, blue: 161/255, alpha: 1)]))
+            
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 4
+            attributedText.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSMakeRange(0, attributedText.string.characters.count))
+            
+            let attachment = NSTextAttachment()
+            attachment.image = UIImage(named: "globe_small")
+            attachment.bounds = CGRect(x: 0, y: -2, width: 12, height: 12)
+            attributedText.append(NSAttributedString(attachment: attachment))
+            
+            nameLabel.attributedText = attributedText
+        }
+            
+            if let statusText = post?.statusText {
+                statusTextView.text = statusText
+            }
+        }
+    }
+    
     static func buttonForTitle(title: String, imageName: String) -> UIButton {
         let button = UIButton()
         button.setTitle(title, for: .normal)
@@ -111,6 +125,7 @@ class FeedCell: UICollectionViewCell {
         addSubview(commentButton)
         addSubview(shareButton)
         
+        
         addConstraintsWithFormat(format: "H:|-8-[v0(44)]-8-[v1]|", views: profileImageView, nameLabel)
         
         addConstraintsWithFormat(format: "H:|-4-[v0]-4-|", views: statusTextView)
@@ -125,7 +140,7 @@ class FeedCell: UICollectionViewCell {
         
         addConstraintsWithFormat(format: "V:|-12-[v0]", views: nameLabel)
         
-        addConstraintsWithFormat(format: "V:|-8-[v0(44)]-4-[v1(30)]-4-[v2]-8-[v3(24)]-8-[v4(0.4)][v5(44)]|", views: profileImageView, statusTextView, statusImageView, likesCommentsLabel, deviderLine, likeButton)
+        addConstraintsWithFormat(format: "V:|-8-[v0(44)]-4-[v1]-4-[v2(200)]-8-[v3(24)]-8-[v4(0.4)][v5(44)]|", views: profileImageView, statusTextView, statusImageView, likesCommentsLabel, deviderLine, likeButton)
         
         addConstraintsWithFormat(format: "V:[v0(44)]|", views: commentButton)
         addConstraintsWithFormat(format: "V:[v0(44)]|", views: shareButton)

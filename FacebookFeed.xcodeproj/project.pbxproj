@@ -12,6 +12,7 @@
 		FB7F76F41DF4830A004575C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB7F76F31DF4830A004575C6 /* Assets.xcassets */; };
 		FB7F76F71DF4830A004575C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB7F76F51DF4830A004575C6 /* LaunchScreen.storyboard */; };
 		FBB8BE0E1DF49CA8001C528C /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8BE0D1DF49CA8001C528C /* FeedCell.swift */; };
+		FBB8BE101DF51DE7001C528C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB8BE0F1DF51DE7001C528C /* Post.swift */; };
 		FBF671F01DF48B9A009E36C0 /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF671EF1DF48B9A009E36C0 /* FeedController.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		FB7F76F61DF4830A004575C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB7F76F81DF4830A004575C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBB8BE0D1DF49CA8001C528C /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		FBB8BE0F1DF51DE7001C528C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		FBF671EF1DF48B9A009E36C0 /* FeedController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -59,6 +61,7 @@
 				FB7F76E91DF4830A004575C6 /* AppDelegate.swift */,
 				FBF671EF1DF48B9A009E36C0 /* FeedController.swift */,
 				FBB8BE0D1DF49CA8001C528C /* FeedCell.swift */,
+				FBB8BE0F1DF51DE7001C528C /* Post.swift */,
 				FB7F76F31DF4830A004575C6 /* Assets.xcassets */,
 				FB7F76F51DF4830A004575C6 /* LaunchScreen.storyboard */,
 				FB7F76F81DF4830A004575C6 /* Info.plist */,
@@ -142,6 +145,7 @@
 				FBB8BE0E1DF49CA8001C528C /* FeedCell.swift in Sources */,
 				FBF671F01DF48B9A009E36C0 /* FeedController.swift in Sources */,
 				FB7F76EA1DF4830A004575C6 /* AppDelegate.swift in Sources */,
+				FBB8BE101DF51DE7001C528C /* Post.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
