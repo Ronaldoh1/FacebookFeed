@@ -10,5 +10,6 @@ class Post {
     
     var name: String?
     var statusText: String?
+    var profileImageName: String? 
     
 }

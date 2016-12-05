@@ -21,10 +21,12 @@ class FeedController: UICollectionViewController , UICollectionViewDelegateFlowL
         let postMark = Post()
         postMark.name = "Mark Zuckerberg"
         postMark.statusText = "Meanwhile, beast turned to the dark side"
+        postMark.profileImageName = "zuckprofile"
         
         let postSteve = Post()
         postSteve.name = "Steve Jobs"
         postSteve.statusText = "Another great thing about XCode is its amazing autocomplete functionality. This becomes really apparent in those old-style job interviews where they get you to code Objective-C on a whiteboard – my usual response is this method is something like this…. I rely on XCode autocomplete so much, I actually don’t know all the long iOS API method names by heart. However, I’ve noticed that in XCode 6 with Swift, autocomplete doesn’t work as smoothly in all cases. So I learned a new trick"
+        postSteve.profileImageName = "steve_profile"
         
         posts.append(postMark)
         posts.append(postSteve)

@@ -98,6 +98,10 @@ class FeedCell: UICollectionViewCell {
             if let statusText = post?.statusText {
                 statusTextView.text = statusText
             }
+            
+            if let profileImageName = post?.profileImageName {
+                profileImageView.image = UIImage(named: profileImageName)
+            }
         }
     }
     
